@@ -59,20 +59,21 @@ def exit():
     return
 
 
-main_menu()
+while True:
+    main_menu()
 
-choice = int(input("Your choice: "))
+    choice = int(input("Your choice: "))
 
-if choice == 1:
-    print("Air time purchasing")
-    airtime()
+    if choice == 1:
+        print("Air time purchasing")
+        airtime()
 
-elif choice == 2:
-    send_money()
+    elif choice == 2:
+        send_money()
 
-elif choice == 3:
-    coffe()
+    elif choice == 3:
+        coffe()
 
-elif choice == 4:
-    exit()
-    
+    elif choice == 4:
+        exit()
+        
