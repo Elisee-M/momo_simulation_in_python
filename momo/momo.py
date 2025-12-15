@@ -46,11 +46,14 @@ def send_money():
             print(f"Monet sent to {phone}")
 
 def coffe():
-    amount = int(input("Enter amount: "))
-    if amount > 0:
-        print("Thanks for coffe!!")
-    else:
-        print("Invalid amount")
+    try:    
+        amount = int(input("Enter amount: "))
+        if amount > 0:
+            print("Thanks for coffe!!")
+        else:
+            print("Invalid amount")
+    except:
+        print("Money should be numbers")
 
 def exit():
     print("Exiting...") 
