@@ -1,5 +1,11 @@
 import time
 
+def delay():
+    print("Processing", end="", flush=True)
+    for i in range(5):
+        print(".", end="", flush=True)
+        time.sleep(1)
+
 def main_menu():
     print("1. Airtime")
     print("2. Send money")
@@ -36,7 +42,21 @@ def send_money():
         if pin != 2008:
             print("Wrong PIN")
         else:
+            delay()
             print(f"Monet sent to {phone}")
+
+def coffe():
+    amount = int(input("Enter amount: "))
+    if amount > 0:
+        print("Thanks for coffe!!")
+    else:
+        print("Invalid amount")
+
+def exit():
+    print("Exiting...") 
+    time.sleep(2)   
+    print("Goodbye!")
+    return
 
 
 main_menu()
@@ -49,3 +69,10 @@ if choice == 1:
 
 elif choice == 2:
     send_money()
+
+elif choice == 3:
+    coffe()
+
+elif choice == 4:
+    exit()
+    
